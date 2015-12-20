@@ -18,17 +18,11 @@
         <activity
             android:name=".SearchActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".SearchActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.eden.superzol_edenmor.MainActivity" />
-        </activity>
-        <activity
-            android:name=".Tab1Activity">
-        </activity>
-        <activity
-            android:name=".Tab2Activity">
+                android:value="com.example.eden.superzol_edenmor.SearchActivity" />
         </activity>
     </application>
 

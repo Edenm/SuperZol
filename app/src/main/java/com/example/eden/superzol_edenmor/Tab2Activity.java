@@ -2,26 +2,23 @@ package com.example.eden.superzol_edenmor;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentManager;
+import android.app.ListFragment;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
+import android.widget.ListView;
 
-/**
- * Created by MOR on 12/19/2015.
- */
-public class Tab2Activity extends Activity {
+public class Tab2Activity extends Fragment {
 
-    TextView tv2;
-
-    protected void OnCreate (Bundle savedInstanceState)
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab2);
-        tv2 = (TextView)findViewById(R.id.textView2);
-        tv2.setText("This is the My Schedule tab");
+        return (LinearLayout)inflater.inflate(R.layout.activity_tab2, container, false);
     }
-}
 
+
+
+}

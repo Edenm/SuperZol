@@ -14,7 +14,7 @@
             android:layout_height="fill_parent"
             android:padding="5dp">
             <TabWidget
-                android:id="@android:id/tabs"
+                android:id="@+id/tabs"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content" />
 
@@ -24,7 +24,7 @@
                 android:layout_gravity="center_horizontal"></RelativeLayout>
 
             <FrameLayout
-                android:id="@android:id/tabcontent"
+                android:id="@+id/tabcontent"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
                 android:padding="5dp"/>

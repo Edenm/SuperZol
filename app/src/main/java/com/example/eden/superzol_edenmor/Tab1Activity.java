@@ -2,26 +2,22 @@ package com.example.eden.superzol_edenmor;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.app.FragmentTransaction;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
-/**
- * Created by MOR on 12/19/2015.
- */
-public class Tab1Activity extends Activity {
+public class Tab1Activity extends Fragment {
 
-    TextView tv;
-
-    protected void OnCreate (Bundle savedInstanceState)
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab1);
-        tv = (TextView)findViewById(R.id.textView);
-        tv.setText("This is Tab 1");
+        return (LinearLayout)inflater.inflate(R.layout.activity_tab1, container, false);
     }
-}
 
+}

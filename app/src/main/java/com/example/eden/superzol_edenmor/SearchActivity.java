@@ -1,58 +1,91 @@
 package com.example.eden.superzol_edenmor;
 
-import android.content.Intent;
-import android.os.Bundle;
+import android.app.ActionBar;
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentTransaction;
+import android.graphics.drawable.Drawable;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.support.v4.app.FragmentManager;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.SpinnerAdapter;
 import android.widget.TabHost;
+import android.widget.TabWidget;
+import android.widget.TableRow;
+import android.widget.Toolbar;
 
-import java.lang.reflect.Type;
-
-
-/**
- * Created by MOR on 12/19/2015.
- */
-public class SearchActivity extends AppCompatActivity{
+public class SearchActivity extends Activity {
 
     TabHost tabHost;
+    TabWidget menuBar;
 
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        tabHost = (TabHost)findViewById(R.id.tabhost);
+        ActionBar actionBar = getActionBar();
+        actionBar.setNavigationMode(actionBar.NAVIGATION_MODE_TABS);
+        ActionBar.Tab tab = actionBar.newTab();
+        tab.setText("TAB 1");
+        TabListener<Tab1Activity> t1 = new TabListener<>(this, "tab1", Tab1Activity.class);
+        tab.setTabListener(t1);
+        actionBar.addTab(tab);
 
-        CreateTab1("Search", "Search");
-        CreateTab2("Super", "Super");
-
+        ActionBar.Tab tab2 = actionBar.newTab();
+        tab.setText("TAB 2");
+        TabListener<Tab1Activity> t2 = new TabListener<>(this, "tab2", Tab1Activity.class);
+        tab.setTabListener(t2);
+        actionBar.addTab(tab2);
     }
 
-    private void CreateTab1(String tag, String label)
-    {
-        Intent intent = new Intent(SearchActivity.this, Tab1Activity.class);
 
-        TabHost.TabSpec spec = tabHost.newTabSpec(tag);
-        spec.setIndicator("Search");
-        spec.setContent(intent);
+    private class TabListener <T extends Fragment> implements ActionBar.TabListener {
 
-        tabHost.addTab(spec);
+        private Fragment mFragment;
+        private final Activity mActivity;
+        private final String mTag;
+        private final Class<T> mClass;
+
+        public TabListener(Activity activity, String tag, Class<T> clz){
+            mActivity = activity;
+            mTag = tag;
+            mClass = clz;
+        }
+
+        @Override
+        public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+            if (mFragment == null)
+            {
+                mFragment = Fragment.instantiate(mActivity,mClass.getName());
+                ft.add(android.R.id.content,mFragment,mTag);
+            }
+            else
+            {
+                ft.attach(mFragment);
+            }
+
+
+        }
+
+        @Override
+        public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+            if (mFragment != null)
+            {
+                ft.detach(mFragment);
+            }
+        }
+
+        @Override
+        public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+
+        }
     }
 
-    private void CreateTab2(String tag, String label)
-    {
-        Intent intent = new Intent(SearchActivity.this, Tab2Activity.class);
-        //intent.AddFlags(ActivityFlags.NewTask);
 
-        TabHost.TabSpec spec = tabHost.newTabSpec(tag);
-        spec.setIndicator("Super");
-        spec.setContent(intent);
 
-        tabHost.addTab(spec);
-    }
+
 }
