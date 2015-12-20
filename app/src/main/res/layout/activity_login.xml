@@ -8,7 +8,8 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
 
-    android:background="#ffffff">
+    android:background="@drawable/background">
+
 
     <LinearLayout
         android:orientation="vertical"
@@ -16,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:padding="10dp"
-        >
+        android:id="@+id/linearLayout">
 
         <EditText
             android:id="@+id/etEmail"
@@ -25,6 +26,8 @@
             android:padding="10dp"
             android:hint="Email"
             android:textColorHint="#bbbbbb"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
             android:drawableLeft="@drawable/mail"/>
         <EditText
             android:id="@+id/etUserName"
@@ -34,6 +37,8 @@
             android:padding="10dp"
             android:hint="User Name"
             android:textColorHint="#bbbbbb"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
             android:drawableLeft="@drawable/user"/>
         <EditText
             android:id="@+id/etPass"
@@ -43,6 +48,8 @@
             android:padding="10dp"
             android:hint="Password"
             android:textColorHint="#bbbbbb"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
             android:password="true"
             android:drawableLeft="@drawable/password"/>
         <Button
@@ -52,7 +59,20 @@
             android:padding="10dp"
             android:layout_margin="4dp"
             android:text="Sign Up"
-            />
+            android:textStyle="bold"
+            android:onClick="setOnSignUpListerner" />
     </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="30dp"
+        android:text="SuperZol"
+        android:id="@+id/labelTxt"
+        android:textColor="#99ff99"
+        android:textSize="50dp"
+        android:textStyle="bold"
+        android:layout_above="@+id/linearLayout"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
