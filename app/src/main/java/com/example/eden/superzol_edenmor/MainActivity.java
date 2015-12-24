@@ -1,12 +1,12 @@
 package com.example.eden.superzol_edenmor;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
 
     Button signup;
 
@@ -20,13 +20,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-         private View.OnClickListener signUpListener = new View.OnClickListener(){
-
+    private View.OnClickListener signUpListener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent1 = new Intent(MainActivity.this,SearchActivity.class);
-                startActivity(intent1);
+                Intent intent = new Intent(MainActivity.this,SearchActivity.class);
+                startActivity(intent);
             }
-        };
+    };
 }
 
