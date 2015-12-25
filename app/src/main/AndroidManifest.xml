@@ -32,6 +32,10 @@
             android:name=".Tab2Activity"
             android:label="@string/app_name">
         </activity>
+        <activity
+            android:name=".ChooseProductActivity"
+            android:label="@string/app_name">
+        </activity>
     </application>
 
 </manifest>

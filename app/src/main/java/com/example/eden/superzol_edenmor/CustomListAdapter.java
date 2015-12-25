@@ -17,9 +17,10 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     private final String[] itemname;
     private final Integer[] imgid;
     private final String [] price;
+    private int pListType;
 
 
-    public CustomListAdapter(Activity context,Integer[] imgid, String[] itemname, String[] price) {
+    public CustomListAdapter(Activity context,Integer[] imgid, String[] itemname, String[] price, int pListType) {
         super(context, R.layout.productlist, itemname);
         // TODO Auto-generated constructor stub
 
@@ -27,11 +28,17 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         this.itemname=itemname;
         this.imgid=imgid;
         this.price=price;
+        this.pListType=pListType;
     }
 
     public View getView(int position,View view,ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
-        View rowView=inflater.inflate(R.layout.productlist, null,true);
+
+        View rowView;
+        if (pListType==1)
+            rowView=inflater.inflate(R.layout.productlist, null,true);
+        else
+            rowView=inflater.inflate(R.layout.productlist2, null,true);
 
         TextView txtTitle = (TextView) rowView.findViewById(R.id.prodName);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.prodImg);
@@ -41,7 +48,6 @@ public class CustomListAdapter extends ArrayAdapter<String> {
         imageView.setImageResource(imgid[position]);
         extratxt.setText(price[position]);
         return rowView;
-
     };
 
 }

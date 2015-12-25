@@ -15,13 +15,19 @@ public class SearchActivity extends TabActivity {
 
         mTabHost = getTabHost();
 
+        Intent intent;
+
         TabHost.TabSpec ts3 = mTabHost.newTabSpec("page1");
-        ts3.setContent(new Intent(this, Tab2Activity.class));
+        intent=new Intent(this, Tab1Activity.class);
+        intent.putExtra("typelist",1);
+        ts3.setContent(intent);
         ts3.setIndicator("רשימה");
         mTabHost.addTab(ts3);
 
         TabHost.TabSpec ts2 = mTabHost.newTabSpec("page1");
-        ts2.setContent(new Intent(this, Tab2Activity.class));
+        intent=new Intent(this, Tab1Activity.class);
+        intent.putExtra("typelist", 2);
+        ts2.setContent(intent);
         ts2.setIndicator("סופר");
         mTabHost.addTab(ts2);
 

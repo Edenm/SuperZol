@@ -3,16 +3,8 @@ package com.example.eden.superzol_edenmor;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.content.Intent;
 
 public class Tab1Activity extends Activity{
 
@@ -26,25 +18,13 @@ public class Tab1Activity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView( R.layout.activity_tab1 );
-        CustomListAdapter adapter= new CustomListAdapter(this,  imgid,itemname, price);
+        int type;
+        Intent intent = getIntent();
+        type=intent.getIntExtra("typelist",0);
+        CustomListAdapter adapter= new CustomListAdapter(this,  imgid,itemname, price,type);
         list = (ListView) findViewById(R.id.listView);
         list.setAdapter(adapter);
 
-
-        /*
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-                // TODO Auto-generated method stub
-                String Slecteditem = itemname[+position];
-                Toast.makeText(getApplicationContext(), Slecteditem,
-                        Toast.LENGTH_SHORT).show();
-
-            }
-        });
-        */
     }
 
 }
