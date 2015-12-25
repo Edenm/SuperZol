@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/tab2"
-    android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:background="@color/white">
 
 
-    <SearchView
+    <LinearLayout
+        android:id="@+id/tab2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layoutDirection="rtl"
-        android:id="@+id/searchView2" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:baselineAligned="false">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0.06" />
-</LinearLayout>
+        <SearchView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/searchView2"
+            android:layout_gravity="center_horizontal"
+            android:layoutDirection="rtl"
+            android:baselineAligned="true"
+            android:background="@color/haki"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:textAlignment="center"
+            android:gravity="center_vertical"
+            android:id="@+id/txtSuperName"
+            android:textStyle="bold" />
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/listView2" />
+
+    </LinearLayout>
+</RelativeLayout>
