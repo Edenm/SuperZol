@@ -22,7 +22,7 @@ public class ListTabActivity extends Activity{
     Integer[] imgid = { R.drawable.dallaktoz, R.drawable.dalshuman, R.drawable.tara};
 
     String[] supername = {"רמי לוי שיווק השקמה - 250 ש''ח", "שופרסל דיל - 300 ש''ח", "יינות ביתן - 315 ש''ח"};
-    Integer[] logoid = { R.drawable.ramilevi_logo, R.drawable.supersal_logo, R.drawable.tara};
+    Integer[] logoid = { R.drawable.ramilevi_logo, R.drawable.supersal_logo, R.drawable.bitan_logo};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,16 +32,7 @@ public class ListTabActivity extends Activity{
         TextView title= (TextView) findViewById(R.id.txtTitleSuper);
         title.setText("שלושת הסופרים הכי זולים");
 
-//        TextView s1= (TextView) findViewById(R.id.txtFirstSuper);
-//        s1.setText("רמי לוי שיווק השקמה - 250 ש''ח");
-//
-//        TextView s2= (TextView) findViewById(R.id.txtSecondSuper);
-//        s2.setText("שופרסל דיל - 300 ש''ח");
-//
-//        TextView s3= (TextView) findViewById(R.id.txtThirdSuper);
-//        s3.setText("יינות ביתן - 315 ש''ח");
-
-        CustomListAdapter adapter = new CustomListAdapter(this, imgid, itemname, price, "list");
+        CustomListAdapter adapter = new CustomListAdapter(this, imgid, itemname, price, "finalList");
         list = (ListView) findViewById(R.id.listViewList);
         list.setAdapter(adapter);
 

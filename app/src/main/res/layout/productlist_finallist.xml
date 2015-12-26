@@ -3,13 +3,26 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/prodImg"
+        android:padding="5dp"
+        android:layoutDirection="rtl"
+        android:layout_weight="0.10" />
 
     <FrameLayout
         android:layout_width="wrap_content"
         android:layout_height="55dp"
-        android:layoutDirection="rtl"
-        android:layout_weight="0.14">
+        android:layout_weight="0.04">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:id="@+id/priceTxt"
+            android:layoutDirection="rtl"
+            android:layout_column="1" />
 
         <TextView
             android:id="@+id/prodName"
@@ -20,15 +33,8 @@
             android:layoutDirection="rtl"
             android:text="Product"
             android:layout_column="24"
-            android:layout_gravity="right|center_vertical" />
+            android:layout_gravity="right|top" />
     </FrameLayout>
 
-    <ImageView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:id="@+id/prodImg"
-        android:padding="5dp"
-        android:layoutDirection="rtl"
-        android:layout_weight="0.10" />
 
 </LinearLayout>
