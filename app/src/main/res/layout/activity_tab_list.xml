@@ -21,27 +21,26 @@
             android:focusable="true"
             android:clickable="true" />
 
-        <FrameLayout
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_weight="1.26">
+            android:layout_height="36dp">
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold"
+                android:textAlignment="center"
                 android:id="@+id/txtTitleSuper"
                 android:layout_gravity="center_horizontal" />
 
-            <ListView
-                android:layout_width="match_parent"
-                android:layout_height="204dp"
-                android:id="@+id/listViewBestSuper"
-                android:layout_gravity="center_horizontal|bottom" />
+        </LinearLayout>
 
-        </FrameLayout>
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="201dp"
+            android:id="@+id/listViewBestSuper" />
 
     </LinearLayout>
 
