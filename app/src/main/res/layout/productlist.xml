@@ -3,12 +3,17 @@
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="48dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnRemove"
-        android:background="@drawable/remove"
-        android:layout_weight="0.02" />
+    <FrameLayout
+        android:layout_width="66dp"
+        android:layout_height="46dp">
+
+        <Button
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:id="@+id/btnRemove"
+            android:background="@drawable/remove"
+            android:layout_gravity="left|bottom" />
+    </FrameLayout>
 
     <ImageView
         android:layout_width="60dp"
@@ -18,10 +23,18 @@
         android:layoutDirection="rtl"
         android:layout_weight="0.10" />
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="55dp"
+        android:layout_weight="0.04">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price"
+            android:id="@+id/priceTxt"
+            android:layoutDirection="rtl"
+            android:layout_column="1" />
 
         <TextView
             android:id="@+id/prodName"
@@ -29,22 +42,11 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textStyle="bold"
-            android:layout_marginLeft="10dp"
             android:layoutDirection="rtl"
-            android:text="Product" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/priceTxt"
-            android:layout_weight="0.10"
-            android:layoutDirection="rtl"
-            android:layout_marginBottom="2dp"
-            android:layout_marginLeft="20dp"/>
-
-
-    </LinearLayout>
+            android:text="Product"
+            android:layout_column="24"
+            android:layout_gravity="right|top" />
+    </FrameLayout>
 
 
 </LinearLayout>

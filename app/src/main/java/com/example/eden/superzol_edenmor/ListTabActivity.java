@@ -21,24 +21,33 @@ public class ListTabActivity extends Activity{
     String[] price = {"5.55", "7.08", "4.32"};
     Integer[] imgid = { R.drawable.dallaktoz, R.drawable.dalshuman, R.drawable.tara};
 
+    String[] supername = {"רמי לוי שיווק השקמה - 250 ש''ח", "שופרסל דיל - 300 ש''ח", "יינות ביתן - 315 ש''ח"};
+    Integer[] logoid = { R.drawable.ramilevi_logo, R.drawable.supersal_logo, R.drawable.tara};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tab_list);
 
-        TextView s1= (TextView) findViewById(R.id.txtFirstSuper);
-        s1.setText("רמי לוי שיווק השקמה - 250 ש''ח");
+        TextView title= (TextView) findViewById(R.id.txtTitleSuper);
+        title.setText("שלושת הסופרים הכי זולים");
 
-        TextView s2= (TextView) findViewById(R.id.txtSecondSuper);
-        s2.setText("שופרסל דיל - 300 ש''ח");
-
-        TextView s3= (TextView) findViewById(R.id.txtThirdSuper);
-        s3.setText("יינות ביתן - 315 ש''ח");
+//        TextView s1= (TextView) findViewById(R.id.txtFirstSuper);
+//        s1.setText("רמי לוי שיווק השקמה - 250 ש''ח");
+//
+//        TextView s2= (TextView) findViewById(R.id.txtSecondSuper);
+//        s2.setText("שופרסל דיל - 300 ש''ח");
+//
+//        TextView s3= (TextView) findViewById(R.id.txtThirdSuper);
+//        s3.setText("יינות ביתן - 315 ש''ח");
 
         CustomListAdapter adapter = new CustomListAdapter(this, imgid, itemname, price, "list");
         list = (ListView) findViewById(R.id.listViewList);
         list.setAdapter(adapter);
+
+        CustomListAdapter adapter2 = new CustomListAdapter(this, logoid, supername, price, "superList");
+        list = (ListView) findViewById(R.id.listViewBestSuper);
+        list.setAdapter(adapter2);
 
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
