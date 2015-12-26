@@ -32,9 +32,6 @@ public class ListTabActivity extends Activity{
         TextView title= (TextView) findViewById(R.id.txtTitleSuper);
         title.setText("שלושת הסופרים הכי זולים");
 
-        CustomListAdapter adapter = new CustomListAdapter(this, imgid, itemname, price, "finalList");
-        list = (ListView) findViewById(R.id.listViewList);
-        list.setAdapter(adapter);
 
         CustomListAdapter adapter2 = new CustomListAdapter(this, logoid, supername, price, "superList");
         list = (ListView) findViewById(R.id.listViewBestSuper);

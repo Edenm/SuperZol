@@ -4,13 +4,11 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/ic_action"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name=".MainActivity"
-            android:label="SuperZol" >
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -27,16 +25,21 @@
                 android:value="com.example.eden.superzol_edenmor.MainActivity" />
         </activity>
         <activity
-            android:name=".Tab1Activity"
-            android:label="@string/app_name" >
+            android:name=".SearchTabActivity"
+            android:label="@string/app_name"
+            android:clickable="true">
         </activity>
         <activity
-            android:name=".Tab2Activity"
-            android:label="@string/app_name" >
+            android:name=".SuperTabActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".ListTabActivity"
+            android:label="@string/app_name">
         </activity>
         <activity
             android:name=".ChooseProductActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
         </activity>
     </application>
 

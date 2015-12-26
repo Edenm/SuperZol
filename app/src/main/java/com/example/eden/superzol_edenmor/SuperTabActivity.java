@@ -14,9 +14,9 @@ import java.util.HashMap;
 
 public class SuperTabActivity extends Activity{
     ListView list;
-    String[] itemname = {"חלב דל לקטוז תנובה", "חלב תנובה 1% קרטון", "חלב טרה 3% שומן","חלב טרה 3% שומן","חלב טרה 3% שומן"};
-    String[] price = {"5.55", "7.08", "4.32","4.32","4.32"};
-    Integer[] imgid = { R.drawable.dallaktoz, R.drawable.dalshuman, R.drawable.tara, R.drawable.tara,R.drawable.tara};
+    String[] itemname = {"חלב דל לקטוז תנובה", "גבינה בולגרית גד", "חומוס אחלה 500 גרם","שמן זית יד מרדכי","קוקה קולה"};
+    String[] price = {"5.55", "14.80", "10.0","34.3","5.99"};
+    Integer[] imgid = { R.drawable.dallaktoz, R.drawable.bulgarit, R.drawable.hummus_classic, R.drawable.olive_oil,R.drawable.cocacola};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

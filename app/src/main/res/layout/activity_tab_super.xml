@@ -19,6 +19,7 @@
             android:layout_gravity="center_horizontal"
             android:layoutDirection="rtl"
             android:baselineAligned="true"
+            android:queryHint="חפש סופר"
             android:background="@color/haki"/>
 
         <TextView

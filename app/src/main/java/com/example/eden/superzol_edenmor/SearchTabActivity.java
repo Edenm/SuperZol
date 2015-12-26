@@ -8,15 +8,16 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.content.Intent;
+import android.widget.Toast;
 
 import java.util.HashMap;
 
 public class SearchTabActivity extends Activity{
 
     ListView list;
-    String[] itemname = {"חלב דל לקטוז תנובה", "חלב תנובה 1% קרטון", "חלב טרה 3% שומן"};
-    String[] price = {"5.55", "7.08", "4.32"};
-    Integer[] imgid = { R.drawable.dallaktoz, R.drawable.dalshuman, R.drawable.tara};
+    String[] itemname = {"חומוס אחלה 500 גרם", "מלפפון", "חלב טרה 3% שומן", "קוקה קולה"};
+    String[] price = {"10", "4.10", "4.32", "5.99"};
+    Integer[] imgid = { R.drawable.hummus_classic, R.drawable.cucumber, R.drawable.tara, R.drawable.cocacola};
 
 
     @Override
@@ -31,11 +32,8 @@ public class SearchTabActivity extends Activity{
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ClipData.Item i = (ClipData.Item) parent.getAdapter().getItem(position);
-                HashMap<String, Object> obj = (HashMap<String, Object>) parent.getAdapter().getItem(position);
-                String name = (String) obj.get("name");
-
-                String pName=parent.getItemAtPosition(position).toString();
+                Intent quantityIntent = new Intent(SearchTabActivity.this, ChooseProductActivity.class);
+                startActivity(quantityIntent);
             }
         });
     }

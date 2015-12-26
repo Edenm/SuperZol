@@ -5,22 +5,6 @@
     android:background="@color/white">
 
 
-    <LinearLayout
-        android:id="@+id/tab1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:baselineAligned="false"
-        android:weightSum="1">
-
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="284dp"
-            android:id="@+id/listViewList"
-            android:nestedScrollingEnabled="false"
-            android:focusable="true"
-            android:clickable="true" />
-
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -28,20 +12,21 @@
 
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="110dp"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:textStyle="bold"
                 android:textAlignment="center"
                 android:id="@+id/txtTitleSuper"
                 android:layout_gravity="center_horizontal" />
 
+
         </LinearLayout>
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="201dp"
-            android:id="@+id/listViewBestSuper" />
-
-    </LinearLayout>
+    <ListView
+        android:layout_width="310dp"
+        android:layout_height="201dp"
+        android:id="@+id/listViewBestSuper"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

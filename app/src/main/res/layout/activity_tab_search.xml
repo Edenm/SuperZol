@@ -19,7 +19,16 @@
             android:layout_gravity="center_horizontal"
             android:layoutDirection="rtl"
             android:baselineAligned="true"
+            android:queryHint="חפש מוצר"
             android:background="@color/haki"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/myList"
+            android:layout_gravity="center_vertical"
+            android:layoutDirection="rtl"
+            android:text="הרשימה שלי"/>
 
         <ListView
             android:layout_width="match_parent"
