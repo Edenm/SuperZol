@@ -24,7 +24,10 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/listView" />
+            android:id="@+id/listViewSearch"
+            android:nestedScrollingEnabled="false"
+            android:focusable="true"
+            android:clickable="true" />
 
     </LinearLayout>
 </RelativeLayout>

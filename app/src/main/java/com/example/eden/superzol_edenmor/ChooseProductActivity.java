@@ -24,7 +24,7 @@ public class ChooseProductActivity extends Activity {
         TextView searchProduct= (TextView)findViewById(R.id.txtSearchProduct);
         searchProduct.setText("חלב");
 
-        CustomListAdapter adapter= new CustomListAdapter(this,  imgid,itemname, price,1);
+        CustomListAdapter adapter= new CustomListAdapter(this,  imgid,itemname, price,"quantity");
         list = (ListView) findViewById(R.id.listView);
         list.setAdapter(adapter);
 

@@ -17,11 +17,11 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     private final String[] itemname;
     private final Integer[] imgid;
     private final String [] price;
-    private int pListType;
+    private String pListType;
 
 
-    public CustomListAdapter(Activity context,Integer[] imgid, String[] itemname, String[] price, int pListType) {
-        super(context, R.layout.productlist, itemname);
+    public CustomListAdapter(Activity context,Integer[] imgid, String[] itemname, String[] price, String pListType) {
+        super(context, R.layout.productlist_quantity, itemname);
         // TODO Auto-generated constructor stub
 
         this.context=context;
@@ -34,11 +34,13 @@ public class CustomListAdapter extends ArrayAdapter<String> {
     public View getView(int position,View view,ViewGroup parent) {
         LayoutInflater inflater=context.getLayoutInflater();
 
-        View rowView;
-        if (pListType==1)
+        View rowView= null;
+        if (pListType.equals("list"))
             rowView=inflater.inflate(R.layout.productlist, null,true);
-        else
-            rowView=inflater.inflate(R.layout.productlist2, null,true);
+        if (pListType.equals("quantity"))
+            rowView=inflater.inflate(R.layout.productlist_quantity, null,true);
+        if (pListType.equals("super"))
+            rowView=inflater.inflate(R.layout.productlist_super, null,true);
 
         TextView txtTitle = (TextView) rowView.findViewById(R.id.prodName);
         ImageView imageView = (ImageView) rowView.findViewById(R.id.prodImg);
