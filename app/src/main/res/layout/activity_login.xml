@@ -1,3 +1,4 @@
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -25,8 +26,8 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:hint="Email"
-            android:textColorHint="#bbbbbb"
-            android:textColor="#ffffff"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:drawableLeft="@drawable/mail"/>
 
@@ -37,8 +38,8 @@
             android:layout_marginTop="-2dp"
             android:padding="10dp"
             android:hint="Password"
-            android:textColorHint="#bbbbbb"
-            android:textColor="#ffffff"
+            android:textColorHint="@color/black"
+            android:textColor="@color/black"
             android:textStyle="bold"
             android:password="true"
             android:drawableLeft="@drawable/password"/>
@@ -59,7 +60,7 @@
         android:padding="30dp"
         android:text="SuperZol"
         android:id="@+id/labelTxt"
-        android:textColor="#99ff99"
+        android:textColor="#33CC99"
         android:textSize="50dp"
         android:textStyle="bold"
         android:layout_above="@+id/linearLayout"
