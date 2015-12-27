@@ -41,8 +41,6 @@ public class CustomListAdapter extends ArrayAdapter<String> {
             rowView=inflater.inflate(R.layout.productlist_quantity, null,true);
         if (pListType.equals("super"))
             rowView=inflater.inflate(R.layout.productlist_super, null,true);
-        if (pListType.equals("finalList"))
-            rowView=inflater.inflate(R.layout.productlist_finallist, null,true);
         if (pListType.equals("superList"))
             rowView=inflater.inflate(R.layout.supermarketlist, null,true);
 

@@ -18,8 +18,9 @@
             android:layoutDirection="rtl"
             android:textAlignment="center"
             android:gravity="center_vertical"
-            android:id="@+id/txtSearchProduct"
-            android:textStyle="bold" />
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textStyle="bold"
+            android:id="@+id/txtSearchProduct" />
 
         <ListView
             android:layout_width="match_parent"

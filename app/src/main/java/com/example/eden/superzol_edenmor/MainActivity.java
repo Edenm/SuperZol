@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
     private View.OnClickListener signUpListener = new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,SearchActivity.class);
+                Intent intent = new Intent(MainActivity.this,ManagerActivity.class);
                 startActivity(intent);
             }
     };

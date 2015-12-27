@@ -7,14 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.content.Intent;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 import java.util.HashMap;
 
-public class ListTabActivity extends Activity{
+public class ComparisonTabActivity extends Activity{
 
     ListView list;
     String[] itemname = {"חלב דל לקטוז תנובה", "חלב תנובה 1% קרטון", "חלב טרה 3% שומן"};
@@ -27,7 +24,7 @@ public class ListTabActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tab_list);
+        setContentView(R.layout.activity_tab_comparison);
 
         TextView title= (TextView) findViewById(R.id.txtTitleSuper);
         title.setText("שלושת הסופרים הכי זולים");
